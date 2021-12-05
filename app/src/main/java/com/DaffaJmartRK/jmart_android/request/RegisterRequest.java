@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RegisterRequest extends StringRequest {
-    private static final String URL = "http://localhost:3090/account/register";
+    private static final String URL = "http://10.0.2.2:3090/account/register";
     private final Map<String,String> params;
     public RegisterRequest(String name, String email, String password,
                            Response.Listener<String> listener, Response.ErrorListener errorListener)
