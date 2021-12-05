@@ -3,9 +3,9 @@ package com.DaffaJmartRK.jmart_android;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.TextView;
+import android.widget.Toast;
 
-import com.DaffaJmartRK.jmart_android.model.Account;
+import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,8 +14,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView tvUser = findViewById(R.id.textMain);
-        Account account = LoginActivity.getLoggedAccount();
-        tvUser.setText(account.name);
+        TabLayout tabLayout =(TabLayout) findViewById(R.id.tab_layout);
+        tabLayout.addTab(tabLayout.newTab().setText("PRODUCTS"));
+        tabLayout.addTab(tabLayout.newTab().setText("FILTER"));
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                Toast.makeText(
+                        MainActivity.this, "Tab " + tab.getPosition(), Toast.LENGTH_LONG
+                ).show();
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {}
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {}
+        });
     }
 }

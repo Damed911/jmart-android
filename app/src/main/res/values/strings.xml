@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">jmart-android</string>
+    <string name="PRODUCTS">PRODUCTS</string>
+    <string name="FILTER">FILTER</string>
+    <string name="prev">PREV</string>
+    <string name="next">NEXT</string>
+    <string name="go">GO</string>
+    <string name="page">Page</string>
 </resources>
