@@ -8,13 +8,24 @@ import java.util.Map;
 
 /**
  * Class untuk menerima request dari lain untuk melakukan paginasi atau pencarian berdasarkan id
- * @author ASUS
+ * @author M. Daffa Ajiputra
  * @version Final
  */
 public class RequestFactory
 {
+    /**
+     * Instance variable untuk class request Factory
+     */
     private static final String URL_FORMAT_ID = "http://10.0.2.2:3090/%s/%d";
     private static final String URL_FORMAT_PAGE = "http://10.0.2.2:3090/%s/page?page=%s&pageSize=%s";
+    /**
+     * Method String Request untuk mendapatkan data berdasarkan ID
+     * @param parentURI         URI Utama
+     * @param id                id
+     * @param listener          listener
+     * @param errorListener     error listener
+     * @return StringRequest    new object
+     */
     public static StringRequest getById
             (
                     String parentURI,
@@ -26,6 +37,15 @@ public class RequestFactory
         String url = String.format(URL_FORMAT_ID, parentURI, id);
         return new StringRequest(Request.Method.GET, url, listener, errorListener);
     }
+    /**
+     * Method String Request untuk mendapatkan data berdasarkan Page
+     * @param parentURI     URI utama
+     * @param page          page number
+     * @param pageSize      ukuran page
+     * @param listener      listener
+     * @param errorListener error listener
+     * @return  StringReqeust   new object
+     */
     public static StringRequest getPage
             (
                     String parentURI,

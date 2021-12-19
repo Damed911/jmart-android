@@ -31,10 +31,13 @@ import java.util.Map;
 
 /**
  * Class untuk semua aktivitas pada layout about me
- * @author ASUS
+ * @author M. Daffa Ajiputra
  * @version Final
  */
 public class AboutMeActivity extends AppCompatActivity {
+    /**
+     * Instance Variable AboutMeActivity
+     */
     Account loggedAccount;
     TextView namaAkun;
     TextView emailAkun;
@@ -57,6 +60,7 @@ public class AboutMeActivity extends AppCompatActivity {
     public static final Gson gson = new Gson();
 
     /**
+     * Method untuk tiap aspek pada layout
      * @param savedInstanceState
      */
     @Override
@@ -190,6 +194,7 @@ public class AboutMeActivity extends AppCompatActivity {
                 queue.add(req);
             }
         });
+        //Invoice button di card view store ketika ditekan
         invoiceBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -197,6 +202,7 @@ public class AboutMeActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        //Invoice button di card view utama ketika ditekan
         invoiceBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

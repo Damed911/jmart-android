@@ -33,7 +33,7 @@ import com.DaffaJmartRK.jmart_android.model.Product;
 
 /**
  * Class untuk menjadi tampilan utama dari aplikasi
- * @author ASUS
+ * @author M. Daffa Ajiputra
  * @version Final
  */
 public class MainActivity extends AppCompatActivity implements RecyclerViewMain.ItemClickListener {
@@ -192,10 +192,10 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewMain.
 
     /**
      * Method untuk mengambil data produk di Json
-     * @param productNames
-     * @param page
-     * @param queue
-     * @param refreshAdapter
+     * @param productNames      nama produk
+     * @param page              halaman produk
+     * @param queue             memasukan ke dalam RequestQueue
+     * @param refreshAdapter    menghubungkan ke adapter main
      */
     public void fetchProduct(List<Product> productNames, int page, RequestQueue queue, boolean refreshAdapter){
         StringRequest fetchProductsRequest = new StringRequest(Request.Method.GET, "http://10.0.2.2:3090/product/page?page="+page+"&pageSize=10", new Response.Listener<String>() {
@@ -236,7 +236,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewMain.
     /**
      * Method untuk membuat menu pada layout main dan hide create product ketika blm memiliki store
      * @param menu
-     * @return
+     * @return boolean
      */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -251,7 +251,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewMain.
     /**
      * Method untuk mendirect logo pada menu menuju activity lain
      * @param item
-     * @return
+     * @return boolean
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

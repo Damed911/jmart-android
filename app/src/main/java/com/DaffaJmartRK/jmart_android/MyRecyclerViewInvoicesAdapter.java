@@ -24,6 +24,11 @@ import com.google.gson.Gson;
 
 import java.util.List;
 
+/**
+ * Adapter Class untuk menampilkan list store invoice history dari penjualan
+ * @author M. Daffa Ajiputra
+ * @version Final
+ */
 public class MyRecyclerViewInvoicesAdapter extends RecyclerView.Adapter<MyRecyclerViewInvoicesAdapter.ViewHolder> {
     private static final Gson gson = new Gson();
     private List<Payment> mData;
@@ -32,7 +37,7 @@ public class MyRecyclerViewInvoicesAdapter extends RecyclerView.Adapter<MyRecycl
     private ItemClickListener mClickListener;
 
 
-    // data is passed into the constructor
+    // Data pada Json akan di transfer menuju constructor
     MyRecyclerViewInvoicesAdapter(Context context, List<Payment> data, List<Product> invoiceProducts) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
@@ -40,14 +45,14 @@ public class MyRecyclerViewInvoicesAdapter extends RecyclerView.Adapter<MyRecycl
 
     }
 
-    // nambah row ke layout
+    // Menambah row ke layout invoices
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = mInflater.inflate(R.layout.recyclerview_invoice, parent, false);
         return new ViewHolder(view);
     }
 
-    // mengambil data untuk setiap cardnya
+    // Mengambil data untuk tiap history invoice
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
@@ -92,13 +97,13 @@ public class MyRecyclerViewInvoicesAdapter extends RecyclerView.Adapter<MyRecycl
         }
     }
 
-    // jumlah total data
+    // Menentukan jumlah data
     @Override
     public int getItemCount() {
         return mData.size();
     }
 
-    //Refresh list apabila terdapat update
+    //Memperbaharui daftar ketika ada pembaharuan
     public void refresh(List<Payment> data) {
         this.mData = data;
         notifyDataSetChanged();
@@ -109,7 +114,7 @@ public class MyRecyclerViewInvoicesAdapter extends RecyclerView.Adapter<MyRecycl
         notifyDataSetChanged();
     }
 
-    // scrolled page
+    // Membuat halaman bisa discroll
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView invoiceName;
         TextView invoiceStatus;

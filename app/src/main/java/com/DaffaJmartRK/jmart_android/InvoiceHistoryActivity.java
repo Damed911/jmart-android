@@ -27,6 +27,11 @@ import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class untuk menampilkan layout Invoice History
+ * @author M. Daffa Ajiputra
+ * @version Final
+ */
 public class InvoiceHistoryActivity extends AppCompatActivity implements MyRecyclerViewInvoicesAdapter.ItemClickListener, MyRecyclerViewTransactionsAdapter.ItemClickListener {
     private static final Gson gson = new Gson();
     MyRecyclerViewInvoicesAdapter adapterInvoices;
@@ -237,8 +242,6 @@ public class InvoiceHistoryActivity extends AppCompatActivity implements MyRecyc
         });
         queue2.add(fetchTransactionProductsRequest);
     }
-
-
     //RecycleView Item ClickListener
     @Override
     public void onItemClick(View view, int position) {

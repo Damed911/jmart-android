@@ -18,8 +18,8 @@ import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 
 /**
- * Class untuk menampilkan detail produk ketika di klik pada MainActivity
- * @author ASUS
+ * Class untuk mengatur aspek pada layout detail ProductDetail
+ * @author M. Daffa Ajiputra
  * @version Final
  */
 public class ProductDetailActivity extends AppCompatActivity {

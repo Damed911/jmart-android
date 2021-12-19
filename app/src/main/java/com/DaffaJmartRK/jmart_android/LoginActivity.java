@@ -20,8 +20,15 @@ import com.DaffaJmartRK.jmart_android.request.LoginRequest;
 import org.json.JSONObject;
 import org.w3c.dom.Text;
 
+/**
+ * Class untuk menampilkan layout login
+ * @author M. Daffa Ajiputra
+ * @version Final
+ */
 public class LoginActivity extends AppCompatActivity implements Response.Listener<String>, Response.ErrorListener{
-
+    /**
+     * Instance Variable LoginActivity
+     */
     public static final Gson gson = new Gson();
     private static Account loggedAccount = null;
 
@@ -30,6 +37,10 @@ public class LoginActivity extends AppCompatActivity implements Response.Listene
     private EditText inEmail;
     private EditText inPass;
 
+    /**
+     * Method untuk setiap aspek pada layout
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,10 +55,17 @@ public class LoginActivity extends AppCompatActivity implements Response.Listene
         loginBtn.setOnClickListener(this::onLoginClick);
     }
 
+    /**
+     * Method untuk register button ketika ditekan
+     * @param v
+     */
     private void onRegisterClick(View v){
         startActivity(new Intent(this, RegisterActivity.class));
     }
-
+    /**
+     * Method untuk login button ketika ditekan
+     * @param v
+     */
     private void onLoginClick(View v){
         String email = inEmail.getText().toString();
         String pass = inPass.getText().toString();
@@ -56,7 +74,6 @@ public class LoginActivity extends AppCompatActivity implements Response.Listene
         RequestQueue queue = Volley.newRequestQueue(this);
         queue.add(req);
     }
-
     @Override
     public void onResponse(String response){
         Intent i = new Intent(this, MainActivity.class);

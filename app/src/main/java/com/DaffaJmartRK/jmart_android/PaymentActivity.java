@@ -24,8 +24,8 @@ import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 
 /**
- * Class untuk mengatur pembelian yang dilakuan oleh user
- * @author ASUS
+ * Class untuk mengatur tiap aspek pada layout payment
+ * @author M. Daffa Ajiputra
  * @version Final
  */
 public class PaymentActivity extends AppCompatActivity {

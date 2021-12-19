@@ -24,6 +24,11 @@ import com.google.gson.Gson;
 import java.security.AccessController;
 import java.util.List;
 
+/**
+ * Adapter class untuk invoice history dari pembelian produk di Jmart
+ * @author M. Daffa Ajiputra
+ * @version Final
+ */
 public class MyRecyclerViewTransactionsAdapter extends RecyclerView.Adapter<MyRecyclerViewTransactionsAdapter.ViewHolder> {
     private static final Gson gson = new Gson();
     private List<Payment> mData;
@@ -31,23 +36,21 @@ public class MyRecyclerViewTransactionsAdapter extends RecyclerView.Adapter<MyRe
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
 
-
-
-    // Passed data
+    // Melakukan passing data
     MyRecyclerViewTransactionsAdapter(Context context, List<Payment> data, List<Product> transactionProducts) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
         this.transactionProducts = transactionProducts;
     }
 
-    // nambah row ke layout
+    // Menambahkan baris ke layout
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = mInflater.inflate(R.layout.recyclerview_transaction, parent, false);
         return new ViewHolder(view);
     }
 
-    // mengambil data untuk setiap cardnya
+    // Mengambil data untuk tiap card invoice
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
@@ -87,13 +90,13 @@ public class MyRecyclerViewTransactionsAdapter extends RecyclerView.Adapter<MyRe
         }
     }
 
-    // jumlah total data
+    // Menentukan total data
     @Override
     public int getItemCount() {
         return mData.size();
     }
 
-    //Refresh list apabila terdapat update
+    //Memperbaharui daftar ketika ada pembaharuan
     public void refresh(List<Payment> data) {
         this.mData = data;
         notifyDataSetChanged();
@@ -106,7 +109,7 @@ public class MyRecyclerViewTransactionsAdapter extends RecyclerView.Adapter<MyRe
 
 
 
-    // scrolled page
+    // Melakukan scroll halaman
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView invoiceNameTransaction;
         TextView invoiceStatusTransaction;

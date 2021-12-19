@@ -18,6 +18,11 @@ import com.DaffaJmartRK.jmart_android.request.RegisterRequest;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/**
+ * Class untuk mengatur aspek pada layout register
+ * @author M. Daffa Ajiputra
+ * @version Final
+ */
 public class RegisterActivity extends AppCompatActivity implements Response.Listener<String>, Response.ErrorListener{
 
     private Button registerBtn;

@@ -13,7 +13,7 @@ import java.util.List;
 import com.DaffaJmartRK.jmart_android.model.Product;
 
 /**
- * Class untuk membuat list pada MainActivity menggunakan Recycle View
+ * Adapter class untuk menampilkan list produk pada MainActivity
  * @author ASUS
  * @version Final
  */

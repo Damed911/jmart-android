@@ -22,7 +22,15 @@ import com.android.volley.toolbox.Volley;
 
 import org.json.JSONObject;
 
+/**
+ * Class untuk menampilkan layout Create Product
+ * @author M. Daffa Ajiputra
+ * @version Final
+ */
 public class CreateProductActivity extends AppCompatActivity {
+    /**
+     * Instance Variable CreateProductActivity
+     */
     private Account loggedAccount;
     private EditText namaProd;
     private EditText beratProd;
@@ -36,7 +44,10 @@ public class CreateProductActivity extends AppCompatActivity {
     private boolean conditionUsed = true;
     private Byte shipment;
 
-
+    /**
+     * Method untuk tiap aspek pada layout
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,7 +64,7 @@ public class CreateProductActivity extends AppCompatActivity {
         shipmentPlans = findViewById(R.id.spinShipment);
         createBtn = findViewById(R.id.createButton);
         cancelBtn = findViewById(R.id.cancelButton);
-
+        //Program untuk menentukan respon ketika radio button terpilih
         kondisi.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -65,6 +76,7 @@ public class CreateProductActivity extends AppCompatActivity {
                 }
             }
         });
+        //Program untuk menentukan respon ketika tombol create ditekan
         createBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -120,6 +132,7 @@ public class CreateProductActivity extends AppCompatActivity {
                 queue.add(createProductRequest);
             }
         });
+        //Program untuk menentukan respon ketika tombol cancel ditekan
         cancelBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
