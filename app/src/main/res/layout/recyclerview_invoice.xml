@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="210dp">
+
+    <TextView
+        android:id="@+id/rv_invoiceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="134dp"
+        android:layout_marginTop="18dp"
+        android:maxEms="8"
+        android:text="SampleInvoiceName"
+        android:textColor="#1E1C1C"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Sample" />
+
+    <TextView
+        android:id="@+id/invoiceStatus"
+        android:layout_width="200dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="134dp"
+        android:layout_marginTop="13dp"
+        android:text="SampleStatus"
+        android:textColor="#0E0E0D"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_tv_invoiceShipmentAddressLabel" />
+
+    <Button
+        android:id="@+id/rv_btnCancelTransaction"
+        android:layout_width="75dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="15dp"
+        android:text="Cancel"
+        android:backgroundTint="#B8B6B6"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="9.5sp"
+        app:layout_constraintEnd_toStartOf="@+id/rv_btnSubmitTransaction"
+        app:layout_constraintTop_toBottomOf="@+id/invoiceStatus" />
+
+    <Button
+        android:id="@+id/rv_btnSubmitTransaction"
+        android:layout_width="75dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="16dp"
+        android:text="Submit"
+        android:backgroundTint="#B8B6B6"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="10sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/invoiceStatus"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/invoiceAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="20dp"
+        android:text="TextView"
+        android:textColor="#555151"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/invoiceTotalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:text="SampleInvoiceTotal"
+        android:textColor="#060706"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/invoiceShipmentPlan" />
+
+    <TextView
+        android:id="@+id/invoiceShipmentPlan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:text="TextView"
+        android:textColor="#0C0C0C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/invoiceAmount" />
+
+    <TextView
+        android:id="@+id/invoiceBuyerId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="134dp"
+        android:layout_marginTop="8dp"
+        android:text="SampleBuyer"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_invoiceName" />
+
+    <TextView
+        android:id="@+id/rv_tv_invoiceShipmentAddressLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="134dp"
+        android:layout_marginTop="44dp"
+        android:text="Shipment Address:"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/invoiceBuyerId" />
+
+    <TextView
+        android:id="@+id/invoiceAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="20dp"
+        android:maxEms="18"
+        android:text="TextView"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/invoiceTotalPrice"
+        tools:text="Jl. Margonda Raya, Depok" />
+
+    <TextView
+        android:id="@+id/productId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/receipt"
+        app:layout_constraintTop_toBottomOf="@+id/invoiceBuyerId" />
+
+    <Button
+        android:id="@+id/rv_btnAcceptInvoice"
+        android:layout_width="75dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="15dp"
+        android:text="Accept"
+        android:backgroundTint="#B8B6B6"
+        android:textColor="@color/black"
+        android:textSize="9.5sp"
+        app:layout_constraintEnd_toStartOf="@+id/rv_btnCancelTransaction"
+        app:layout_constraintTop_toBottomOf="@+id/invoiceStatus" />
+
+    <EditText
+        android:id="@+id/receipt"
+        android:layout_width="123dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="108dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="receipt"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rv_btnAcceptInvoice"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

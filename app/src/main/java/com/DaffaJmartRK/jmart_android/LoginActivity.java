@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.*;
 import android.widget.*;
 
+import com.DaffaJmartRK.jmart_android.model.Store;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -80,4 +81,5 @@ public class LoginActivity extends AppCompatActivity implements Response.Listene
     public static Account getLoggedAccount(){
         return loggedAccount;
     }
+
 }

@@ -39,7 +39,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="48dp"
             android:layout_marginEnd="16dp"
-            android:text="Name"
+            android:hint="Name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/textProduct">
@@ -52,7 +52,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="96dp"
             android:layout_marginEnd="16dp"
-            android:text="Weight"
+            android:hint="Weight"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/editName">
@@ -65,7 +65,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="96dp"
             android:layout_marginEnd="16dp"
-            android:text="Price"
+            android:hint="Price"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/editWeight">
@@ -78,7 +78,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="96dp"
             android:layout_marginEnd="16dp"
-            android:text="Discount"
+            android:hint="Discount"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/editPrice">
@@ -99,6 +99,7 @@
         </TextView>
 
         <RadioGroup
+            android:id="@+id/condition"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="175dp"
@@ -109,12 +110,14 @@
             android:orientation="horizontal">
 
             <RadioButton
+                android:id="@+id/newRButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="New"
                 android:textSize="16dp">
             </RadioButton>
             <RadioButton
+                android:id="@+id/usedRButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="-100dp"
@@ -141,8 +144,9 @@
             android:id="@+id/spinCategory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="285dp"
+            android:layout_marginStart="264dp"
             android:layout_marginTop="60dp"
+            android:entries="@array/productCategory"
             app:layout_constraintStart_toStartOf="@id/textCategory"
             app:layout_constraintTop_toTopOf="@id/textCondition">
         </Spinner>
@@ -165,36 +169,38 @@
             android:id="@+id/spinShipment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="285dp"
+            android:layout_marginStart="264dp"
             android:layout_marginTop="60dp"
+            android:entries="@array/shipmentPlans"
             app:layout_constraintStart_toStartOf="@id/textShipment"
             app:layout_constraintTop_toTopOf="@id/textCategory">
         </Spinner>
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#B8B6B6"
+            android:text="Cancel"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textShipment">
+        </Button>
+
+        <Button
+            android:id="@+id/createButton"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#B8B6B6"
+            android:text="Create"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textShipment">
+        </Button>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <Button
-        android:id="@+id/createButton"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="700dp"
-        android:text="Create"
-        android:backgroundTint="#B8B6B6"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/cardView">
-    </Button>
-
-    <Button
-        android:id="@+id/cancelButton"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="700dp"
-        android:text="Cancel"
-        android:backgroundTint="#B8B6B6"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toEndOf="@id/createButton"
-        app:layout_constraintTop_toTopOf="@id/cardView">
-    </Button>
 </androidx.constraintlayout.widget.ConstraintLayout>

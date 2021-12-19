@@ -6,6 +6,11 @@ import com.android.volley.toolbox.*;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Class untuk menerima request dari lain untuk melakukan paginasi atau pencarian berdasarkan id
+ * @author ASUS
+ * @version Final
+ */
 public class RequestFactory
 {
     private static final String URL_FORMAT_ID = "http://10.0.2.2:3090/%s/%d";
