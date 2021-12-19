@@ -15,19 +15,14 @@ import com.DaffaJmartRK.jmart_android.model.Account;
 import com.DaffaJmartRK.jmart_android.model.Store;
 import com.DaffaJmartRK.jmart_android.request.RegStoreRequest;
 import com.DaffaJmartRK.jmart_android.request.TopUpRequest;
-import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Class untuk semua aktivitas pada layout about me
